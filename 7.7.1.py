@@ -1,4 +1,4 @@
-dictionary = {}
+dictionary = {} # Dictionary starts off empty
 
 title = input('Enter a title for the data:\n')
 print('You entered:', title)
