@@ -23,5 +23,6 @@ def con(string):
     return con
 
 user = input('Enter a string:\n')
+
 print('\nString contains %d vowels.' % vowel(user))
 print('String contains %d consonants.' % con(user))
