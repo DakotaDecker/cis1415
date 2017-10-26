@@ -1,39 +1,6 @@
 user = input('Enter a phone number in the format XXX-XXX-XXXX:\n')
 print('You entered:', user)
 user = user.upper()
-
-'''
-# Function that replaces every character in the string
-# with a 2 for some reason.
-# I'm not sure why it isn't working, but theoretically
-# this would be the shortest way to solve the problem.
-
-# Make sure to call the function in the print statement at the end!
-
-def replace(num):
-    for x in num:
-        if x == 'A' or 'B' or 'C':
-            num = num.replace(x, '2')
-        if x == 'D' or 'E' or 'F':
-            num = num.replace(x, '3')
-        if x == 'G' or 'H' or 'I':
-            num = num.replace(x, '4')
-        if x == 'J' or 'K' or 'L':
-            num = num.replace(x, '5')
-        if x == 'M' or 'N' or 'O':
-            num = num.replace(x, '6')
-        if x == 'P' or 'Q' or 'R' or 'S':
-            num = num.replace(x, '7')
-        if x == 'T' or 'U' or 'V':
-            num = num.replace(x, '8')
-        if x == 'W' or 'X' or 'Y' or 'Z':
-            num = num.replace(x, '9')
-    return num
-'''
-
-
-# This works
-
 user = user.replace('A', '2')
 user = user.replace('B', '2')
 user = user.replace('C', '2')
@@ -60,7 +27,7 @@ user = user.replace('W', '9')
 user = user.replace('X', '9')
 user = user.replace('Y', '9')
 user = user.replace('Z', '9')
-
+print('Just digits:', user)
 
 '''
 # Excessive amount of code, but it works
@@ -101,4 +68,56 @@ for x in user:
         user = user.replace('Y', '9')
         user = user.replace('Z', '9')
 '''
-print('Just digits:', user)
+
+'''
+# Function that replaces every character in the string
+# with a 2 for some reason.
+# I'm not sure why it isn't working, but theoretically
+# this would be the shortest way to solve the problem.
+
+# Make sure to call the function in the print statement!
+
+def replace(num):
+    for x in num:
+        if x == 'A' or 'B' or 'C':
+            num = num.replace(x, '2')
+        if x == 'D' or 'E' or 'F':
+            num = num.replace(x, '3')
+        if x == 'G' or 'H' or 'I':
+            num = num.replace(x, '4')
+        if x == 'J' or 'K' or 'L':
+            num = num.replace(x, '5')
+        if x == 'M' or 'N' or 'O':
+            num = num.replace(x, '6')
+        if x == 'P' or 'Q' or 'R' or 'S':
+            num = num.replace(x, '7')
+        if x == 'T' or 'U' or 'V':
+            num = num.replace(x, '8')
+        if x == 'W' or 'X' or 'Y' or 'Z':
+            num = num.replace(x, '9')
+    return num
+
+# Similarly, this function returns a string of all 9s
+
+def replace(num):
+    digits = ''
+    for x in num:
+        if x == 'A' or 'B' or 'C':
+            x = '2'
+        if x == 'D' or 'E' or 'F':
+            x = '2'
+        if x == 'G' or 'H' or 'I':
+            x = '2'
+        if x == 'J' or 'K' or 'L':
+            x = '5'
+        if x == 'M' or 'N' or 'O':
+            x = '6'
+        if x == 'P' or 'Q' or 'R' or 'S':
+            x = '7'
+        if x == 'T' or 'U' or 'V':
+            x = '8'
+        if x == 'W' or 'X' or 'Y' or 'Z':
+            x = '9'
+        digits += x
+    return num
+'''
