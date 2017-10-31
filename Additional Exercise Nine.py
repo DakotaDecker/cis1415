@@ -32,7 +32,7 @@ def num_consonants(userinput):
     
 
 if __name__ == '__main__':
-    Input = input('Enter a String:\n')
+    Input = input('Enter a String:\n').lower()
     vowels = num_vowels(Input)
     consonants = num_consonants(Input)
     print('Number of vowels:', vowels)
