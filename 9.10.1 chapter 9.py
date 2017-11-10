@@ -16,6 +16,28 @@ class ToPurchase:
         
     def total_sum(self):
         print('%s%.0f' % ('$', items1.sum_total()))
+        
+'''
+Everything but the class definition should be under the "if __name__ == "__main__":" line.
+I still don't know what that line means, but apparently that's how it works!
+If I were you, I would use just one line to let the user assign the values for the item.
+For example, instead of "input_name = str(input())" and "items1.item_name = input_name",
+I would make one line "items1.item_name = input()" (no need to type str in front of input,
+because inputs are strings by default).
+Then, in the input() parentheses, I would type the "Enter item name:\n" string to prompt
+the user for input (as opposed to using a separate print statement).
+
+items1.item_name = input('Enter item name:\n')
+
+Then for the second item, like you did, use "items2 = ToPurchase()" to initialize the second item,
+and underneath have:
+items2.item_name = input('Enter item name:\n')
+items2.item_price = float(input('Enter item price:\n'))
+etc.
+etc.
+
+-Dakota
+'''
 input_name = str(input())
 input_price = float(input())
 input_quantity = int(input())
